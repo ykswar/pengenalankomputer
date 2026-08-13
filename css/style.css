@@ -1,0 +1,166 @@
+/* ===================================================
+   style.css - CSS buatan sendiri
+   Website Edukasi Pengenalan Perangkat Komputer
+   UAS Pemrograman Web I - Kelas IF210
+   =================================================== */
+
+/* --- pengaturan umum halaman --- */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+  color: #212529;
+}
+
+/* --- bagian header / banner atas --- */
+.banner {
+  background-color: #0d6efd;
+  color: #ffffff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.banner h1 {
+  color: #ffffff;
+  font-size: 36px;
+}
+
+.banner p {
+  font-size: 18px;
+  color: #e7f1ff;
+}
+
+/* --- judul tiap bagian --- */
+.judul-bagian {
+  border-left: 5px solid #0d6efd;
+  padding-left: 12px;
+  margin-bottom: 20px;
+}
+
+/* --- kartu materi --- */
+.kartu {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.kartu:hover {
+  border-color: #0d6efd;
+}
+
+.kartu img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+/* --- kotak kalkulator ukuran file --- */
+.kotak-kalkulator {
+  background-color: #ffffff;
+  border: 2px solid #0d6efd;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* --- kotak hasil perhitungan --- */
+.kotak-hasil {
+  background-color: #212529;
+  color: #20c997;
+  font-family: "Courier New", monospace;
+  font-size: 15px;
+  border-radius: 6px;
+  padding: 15px;
+  margin-top: 15px;
+  min-height: 110px;
+}
+
+.kotak-hasil .label {
+  color: #adb5bd;
+}
+
+/* --- kode --- */
+code {
+  background-color: #e9ecef;
+  color: #d63384;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+/* --- tabel --- */
+table {
+  background-color: #ffffff;
+}
+
+thead {
+  background-color: #212529;
+  color: #ffffff;
+}
+
+/* --- tombol pilihan pada kuis --- */
+.pilihan {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+}
+
+.pilihan:hover {
+  background-color: #e7f1ff;
+}
+
+.pilihan.benar {
+  background-color: #d1e7dd;
+  border-color: #198754;
+}
+
+.pilihan.salah {
+  background-color: #f8d7da;
+  border-color: #dc3545;
+}
+
+/* --- video dan audio --- */
+video {
+  width: 100%;
+  border-radius: 8px;
+}
+
+audio {
+  width: 100%;
+}
+
+/* --- footer --- */
+footer {
+  background-color: #212529;
+  color: #adb5bd;
+  padding: 30px 0 15px 0;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #adb5bd;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffffff;
+}
+
+/* --- tampilan di layar kecil --- */
+@media (max-width: 768px) {
+  .banner h1 {
+    font-size: 26px;
+  }
+  .banner {
+    padding: 30px 0;
+  }
+}

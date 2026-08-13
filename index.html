@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beranda - Kenal Komputer</title>
+
+  <!-- Bootstrap 5 dari CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS buatan sendiri -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="tulisTahun()">
+
+<!-- ===== MENU NAVIGASI ===== -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><b>Kenal Komputer</b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="materi.html">Materi</a></li>
+        <li class="nav-item"><a class="nav-link" href="kuis.html">Kuis</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== BANNER ===== -->
+<div class="banner">
+  <div class="container">
+    <h1>Kenali Perangkat Komputermu</h1>
+    <p>Belajar bagian-bagian komputer dengan bahasa yang mudah dipahami</p>
+    <a href="materi.html" class="btn btn-light btn-lg mt-2">Mulai Belajar</a>
+  </div>
+</div>
+
+<!-- ===== KALKULATOR UKURAN ===== -->
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="judul-bagian">Kalkulator Ukuran Penyimpanan</h2>
+      <p>Sering bingung membedakan MB dengan GB? Di komputer, setiap satuan naik
+      kelipatan <b>1024</b>, bukan 1000. Jadi 1 GB itu sama dengan 1024 MB.</p>
+      <p>Silakan masukkan angka dan pilih satuannya, lalu klik tombol Hitung untuk
+      melihat nilainya dalam semua satuan.</p>
+      <img src="gambar/banner.jpg" alt="Gambar komputer" class="img-fluid rounded mt-3">
+    </div>
+
+    <div class="col-md-6">
+      <div class="kotak-kalkulator">
+        <label for="input-angka"><b>Masukkan ukuran:</b></label>
+        <div class="row mt-2">
+          <div class="col-7">
+            <input type="number" class="form-control" id="input-angka" placeholder="Contoh: 500">
+          </div>
+          <div class="col-5">
+            <select class="form-select" id="input-satuan">
+              <option value="byte">Byte</option>
+              <option value="kb">KB</option>
+              <option value="mb" selected>MB</option>
+              <option value="gb">GB</option>
+              <option value="tb">TB</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="btn btn-primary mt-3" onclick="hitungUkuran()">Hitung</button>
+        <button class="btn btn-secondary mt-3" onclick="isiContoh()">Isi Contoh</button>
+
+        <div class="kotak-hasil" id="kotak-hasil">
+          Hasil perhitungan akan muncul di sini.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== DAFTAR MATERI ===== -->
+<div class="container mt-5">
+  <h2 class="judul-bagian">Materi yang Dipelajari</h2>
+  <p>Ada enam komponen utama komputer yang dibahas di website ini.</p>
+
+  <div class="row mt-4">
+    <div class="col-md-4 mb-4">
+      <div class="kartu">
+        <img src="gambar/CPU.jpg" alt="Gambar processor">
+        <div class="p-3">
+          <h5>1. Processor (CPU)</h5>
+          <p>Otak komputer yang mengolah semua perintah dari pengguna.</p>
+          <a href="materi.html#m1" class="btn btn-outline-primary btn-sm">Baca</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="kartu">
+        <img src="gambar/ram.jpg" alt="Gambar RAM">
+        <div class="p-3">
+          <h5>2. RAM (Memori)</h5>
+          <p>Tempat penyimpanan sementara saat program sedang berjalan.</p>
+          <a href="materi.html#m2" class="btn btn-outline-primary btn-sm">Baca</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="kartu">
+        <img src="gambar/penyimpanan.jpg" alt="Gambar HDD dan SSD">
+        <div class="p-3">
+          <h5>3. Penyimpanan</h5>
+          <p>Perbedaan HDD dan SSD serta cara memilihnya.</p>
+          <a href="materi.html#m3" class="btn btn-outline-primary btn-sm">Baca</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="kartu">
+        <img src="gambar/motherboard.jpg" alt="Gambar motherboard">
+        <div class="p-3">
+          <h5>4. Motherboard</h5>
+          <p>Papan utama yang menghubungkan semua komponen.</p>
+          <a href="materi.html#m4" class="btn btn-outline-primary btn-sm">Baca</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="kartu">
+        <img src="gambar/io.jpg" alt="Gambar monitor dan keyboard">
+        <div class="p-3">
+          <h5>5. Input dan Output</h5>
+          <p>Perbedaan perangkat masukan dan perangkat keluaran.</p>
+          <a href="materi.html#m5" class="btn btn-outline-primary btn-sm">Baca</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="kartu">
+        <img src="gambar/psu.jpg" alt="Gambar power supply">
+        <div class="p-3">
+          <h5>6. Power Supply</h5>
+          <p>Sumber tenaga listrik untuk seluruh komponen komputer.</p>
+          <a href="materi.html#m6" class="btn btn-outline-primary btn-sm">Baca</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== VIDEO ===== -->
+<div class="container mt-4">
+  <h2 class="judul-bagian">Video Pengantar</h2>
+  <div class="row">
+    <div class="col-md-7">
+      <video controls poster="gambar/banner.jpg">
+        <source src="media/pengantar.mp4" type="video/mp4">
+        Browser kamu tidak mendukung video.
+      </video>
+    </div>
+    <div class="col-md-5">  
+      <a href="kuis.html" class="btn btn-primary">Coba Kuisnya</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <h5 class="text-white">Kenal Komputer</h5>
+        <p>Website edukasi pengenalan perangkat keras komputer. Dibuat untuk memenuhi
+        tugas UAS mata kuliah Pemrograman Web I, Universitas Siber Asia.</p>
+      </div>
+      <div class="col-md-3">
+        <h6 class="text-white">Halaman</h6>
+        <ul class="list-unstyled">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="materi.html">Materi</a></li>
+          <li><a href="kuis.html">Kuis</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h6 class="text-white">Sumber Bacaan</h6>
+        <ul class="list-unstyled">
+          <li><a href="https://id.wikipedia.org/wiki/Perangkat_keras" target="_blank">Wikipedia - Perangkat Keras</a></li>
+          <li><a href="https://www.intel.co.id" target="_blank">Intel Indonesia</a></li>
+          <li><a href="https://www.amd.com" target="_blank">AMD</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr style="border-color:#495057">
+    <p class="text-center mb-0">&copy; <span id="tahun"></span> Kelompok 9 - Kelas IF210 - PJJ Informatika</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
